@@ -1,0 +1,77 @@
+---
+title: "Chess Package Info"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Intro to Chess Rules and Board
+
+Chess Rules and Board is the official title of the package named kirkspackage. This package is designed to help you learn about chess by exploring pieces, the board, and visualizing movement. It tells the user about the pieces by listing the name, beginning notation, movement, points associated with it (to communicate its value), and the number of that piece on the board. This package also contains a graph of a chess board to show chess board notation and to show how the pieces can move.
+
+**For your information**
+
+All of the package files can be found on GitHub using this link:
+
+https://github.com/ktvenstrup/kirksChess-package
+
+
+## Load the dataset that is included
+
+```{r data}
+#Load data, check structure, and look at the head
+
+library(kirksChess)
+
+data("chess_games")
+str(chess_games)
+head(chess_games)
+
+```
+
+
+## Look at visual that is included
+
+```{r board}
+#This visual can be expanded to a more accurate depiction of a chess board by changing the aspect ration or the size of the screen
+
+board()
+
+
+```
+
+
+## Show pieces function
+
+```{r pieces}
+# This function shows a list of all of the chess pieces, which acts as a map for you to decide which function you want to try next. It also includes a lot of other useful information, some of which has already been gone over in the 2 previous chunks.
+
+pieces()
+
+```
+
+
+
+## Show individual piece functions
+
+```{r piece}
+#These functions all display information about the individual pieces
+
+king()
+
+queen()
+
+rook()
+
+bishop()
+
+knight()
+
+pawn()
+
+```
+
+
+*Reminder* echo = FALSE` parameter can be added to the code chunk after "r" to prevent printing of the R code that generates the plot
